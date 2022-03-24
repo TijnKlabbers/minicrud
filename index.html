@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="#contact">About</a></li>
+        <li><a href="Login.html">Login</a></li>
+      </ul>
+    </header>
+    <img class="logo" src="img/LOGO.png" />
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img class="Food1" src="img/food1.jpg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img class="food2" src="img/food2.jpeg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img class="food3" src="img/food3.jpg" style="width: 100%" />
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="t"></span>
+      <span class="t"></span>
+      <span class="t"></span>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("t");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3500); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
