@@ -46,10 +46,10 @@ img {
 
 .logo {
   position: absolute;
-  width: auto;
-  height: 500px;
-  top: 190;
-  left: 200;
+  width: 60%;
+  height: auto;
+  top: 190px;
+  left: 20%;
   z-index: 3;
 }
 .card-text {
@@ -91,4 +91,9 @@ img {
 }
 .text-muted {
   text-align: right;
+}
+
+.begin{
+  object-fit: cover;
+  max-width: 100%;
 }
