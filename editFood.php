@@ -1,4 +1,3 @@
-
 <?php include_once "includes/connect.php";
 
 //$_POST['titel'];
@@ -35,58 +34,36 @@ if(isset($_POST['aanpassen'])){
     }
 }
 ?>
+
 <head>
-<link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <form id="form" class='editForm' action="" method="post">
-        <h1>Edit</h1>
-        <div class="input-control">
-          <input
-            value="<?php echo $results['id'];?>"
-            class="field_class"
-            name="id"
-            type="hidden"
-            placeholder="image"
-            autofocus
-          />
+  <h1>Edit</h1>
+  <div class="input-control">
+    <input value="<?php echo $results['id'];?>" class="field_class" name="id" type="hidden" placeholder="image"
+      autofocus />
 
-        </div>
-        <div class="input-control">
-          <label class="login-tekst" for="image">image</label>
-          <input
-            value="<?php echo $results['img'];?>"
-            class="field_class"
-            name="img"
-            type="text"
-            placeholder="image"
-            autofocus
-          />
+  </div>
+  <div class="input-control">
+    <label class="login-tekst" for="image">image</label>
+    <input value="<?php echo $results['img'];?>" class="field_class" name="img" type="text" placeholder="image"
+      autofocus />
 
-        </div>
-        <div class="input-control">
-          <label class="login-tekst" for="password">titel</label>
-          <input
-            value="<?php echo $results['titel'];?>"
-            class="field_class"
-            name="titel"
-            type="text"
-            placeholder="titel"
-          />
+  </div>
+  <div class="input-control">
+    <label class="login-tekst" for="password">titel</label>
+    <input value="<?php echo $results['titel'];?>" class="field_class" name="titel" type="text" placeholder="titel" />
 
-        </div>
+  </div>
 
-        <div class="input-control">
-          <label class="login-tekst" for="password">price</label>
-          <input
-            value="<?php echo $results['price'];?>"
-            class="field_class"
-            name="price"
-            type="text"
-            placeholder="wachtwoord"
-          />
+  <div class="input-control">
+    <label class="login-tekst" for="password">price</label>
+    <input value="<?php echo $results['price'];?>" class="field_class" name="price" type="text"
+      placeholder="wachtwoord" />
 
-        </div>
-        
+  </div>
 
-        <button class="submit_class" value="aanpassen" name="aanpassen" type="submit">Add</button>
-      </form>
+
+  <button class="submit_class" value="aanpassen" name="aanpassen" type="submit">Add</button>
+</form>

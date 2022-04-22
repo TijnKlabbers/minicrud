@@ -24,7 +24,7 @@ $result =$stmt->fetchAll();
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Menu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -33,16 +33,16 @@ $result =$stmt->fetchAll();
 <body>
   <header class="topnav" id="myTopnav">
 
-  <a href="index.php">Home</a>
-  <a href="menu.php">Menu</a>
-  <a href="login.php">Login</a>
-  <div class="search-container">
-    <form action="menu.php">
-      <input type="text" placeholder="search" name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <a href="index.php">Home</a>
+    <a href="menu.php">Menu</a>
+    <a href="login.php">Login</a>
+    <div class="search-container">
+      <form action="menu.php">
+        <input type="text" placeholder="search" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
 
-</div>
+    </div>
   </header>
   <div class="witregel"></div>
   <div class="flex-container">
