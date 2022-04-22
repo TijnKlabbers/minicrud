@@ -39,7 +39,7 @@ header("location: adminMenu.php");
 
         </div>
         <div class="input-control">
-          <label class="login-tekst" for="password">titel</label>
+          <label class="login-tekst" for="titel">titel</label>
           <input
             id=""
             class="field_class"
@@ -51,7 +51,7 @@ header("location: adminMenu.php");
         </div>
 
         <div class="input-control">
-          <label class="login-tekst" for="password">price</label>
+          <label class="login-tekst" for="price">price</label>
           <input
             id=""
             class="field_class"
