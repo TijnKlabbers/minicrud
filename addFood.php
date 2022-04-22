@@ -24,7 +24,7 @@ header("location: adminMenu.php");
 <head>
 <link rel="stylesheet" href="css/main.css" />
 </head>
-<form id="form" action="" method="post">
+<form id="form" class="editForm "action="" method="post">
         <h1>adding</h1>
         <div class="input-control">
           <label class="login-tekst" for="image">image</label>

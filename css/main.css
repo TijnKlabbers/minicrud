@@ -102,13 +102,6 @@ body {
 }
 
 /* Style the header */
-.header2 {
-  display: flex;
-  background-color: black;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-}
 
 .navigatie {
   display: flex;
