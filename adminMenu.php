@@ -1,4 +1,13 @@
 <?php include_once "includes/connect.php";
+if(isset($_SESSION['login']) && $_SESSION['login'] == true){
+
+
+} else {
+  $_SESSION['username'] = $results['username'];
+  $_SESSION['login'] = false;
+  header("Location: login.php");
+
+}
 //dit stuk haalt de data op
 $sql = "SELECT * FROM products";
 $stmt = $conn->prepare($sql);
@@ -18,18 +27,24 @@ $results = $stmt->fetchAll();
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Cormorant+Garamond:wght@600;700&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="topnav" id="myTopnav">
-        <a href="index.php" class="active">Home</a>
-        <a href="menu.php" class="active">Menu</a>
-        <a href="login.php" class="active">Login</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+    <header class="header2">
+      <div class="navigatie">
+        <nav>
+          <a class="active" href="php/logout.php">Log out</a>
+        </nav>
+      </div>
+      <div class="intro">
+        <h4>Menu</h4>
+      </div>
     </header>
     <div class="witregel"></div>
+    <a class="add" href='addFood.php'>add</a>
     <div class="flex-container">
       <?php
         foreach($results as $res){
@@ -38,14 +53,16 @@ $results = $stmt->fetchAll();
             <div>
               <img class="afbeeldingen" src="img/<?php echo $res['img']?>"></div>
             <div class="onderkant-afbeelding">
-              
             <?php echo $res['titel'];?>
             <br>
-
-            <?php echo $res['price'];?>
-              
-         
+            €<?php echo $res['price'];?>
             </div>
+            
+            <a class="edit" href="editFood.php?id=<?php echo $res['id']; ?>">Edit</a>
+            <a class="delete" href='deleteFood.php?id=<?php echo $res['id']; ?>'>Delete</a>
+
+          
+            
           </div>
           <?php
         }
