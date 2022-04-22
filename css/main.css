@@ -11,7 +11,13 @@ body {
   height: 100vh;
   width: 100%;
 }
-
+.editForm {
+  width: 300px;
+  margin: 120px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  padding: 30px;
+}
 .index-body {
   height: 100vh;
   width: 100%;
@@ -24,6 +30,7 @@ body {
 .topnav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-color: rgba(5, 5, 5, 0.698);
   justify-content: left;
   width: 100%;
@@ -43,7 +50,6 @@ body {
 }
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
-    display: none;
   }
   .topnav a.icon {
     float: right;
@@ -52,8 +58,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {
+  .topnav {
     position: relative;
+    height: 300px;
+    flex-wrap: wrap;
   }
   .topnav.responsive .icon {
     position: absolute;
@@ -318,4 +326,58 @@ footer > p > a {
   color: blue;
   text-decoration: none;
   font-size: 20px;
+}
+
+.topnav input[type="text"] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+    width: 390px;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  .topnav .search-container {
+    float: none;
+  }
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .search-container form button {
+    width: 10%;
+  }
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .flex-container {
+    padding-left: 0;
+  }
 }

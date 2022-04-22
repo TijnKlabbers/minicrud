@@ -26,7 +26,7 @@
       </div>
     </header>
     <h1>HEAVEN'S KITCHEN</h1>
-    <h2>THE ONLY RESTAURANT WHERE IT TASTS LIKE ITS MADE IN HEAVEN</h2>
+    <h2>THE ONLY RESTAURANT WHERE IT TASTE LIKE ITS MADE IN HEAVEN</h2>
     <script>
       function myFunction() {
         var x = document.getElementById("myTopnav");
